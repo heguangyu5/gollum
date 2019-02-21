@@ -57,13 +57,12 @@
     <div id="gollum-editor-format-selector">
       <label for="format">Edit Mode</label>
       <select id="wiki_format" name="format">
-      {{#formats}}
-        <option {{#selected}}selected="selected" {{/selected}}value="{{id}}">
-          {{name}}
-        </option>
-      {{/formats}}
+      <option selected="selected" value="markdown">
+          Markdown
+    </option>
      </select>
     </div>
+    <div>drag & drop to upload file</div>
   </div>
   <div id="gollum-editor-help" class="jaws">
     <ul id="gollum-editor-help-parent">
@@ -87,7 +86,7 @@
       </div>
     </div>
   </div>
-    <textarea id="gollum-editor-body"
+    <textarea id="gollum-editor-body" style="height:500px"
      data-markup-lang="{{format}}" name="content" class="mousetrap">{{content}}</textarea>
     <div>
       <i class="fa fa-spinner fa-spin"></i>

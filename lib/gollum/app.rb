@@ -107,7 +107,8 @@ module Precious
     end
 
     get '/' do
-      redirect clean_url(::File.join(@base_url, @page_dir, wiki_new.index_page))
+      #redirect clean_url(::File.join(@base_url, @page_dir, wiki_new.index_page))
+      redirect to('/fileview')
     end
 
     # path is set to name if path is nil.
@@ -305,7 +306,7 @@ module Precious
         wiki.delete_page(page, commit)
       end
 
-      redirect to('/')
+      redirect to('/refresh')
     end
 
     get '/create/*' do
@@ -503,13 +504,17 @@ module Precious
       options  = settings.wiki_options
       content  = wiki.pages
       # if showing all files include wiki.files
-      content  += wiki.files if options[:show_all]
+      #content  += wiki.files if options[:show_all]
 
       # must pass wiki_options to FileView
       # --show-all and --collapse-tree can be set.
       @results = Gollum::FileView.new(content, options).render_files
       @ref     = wiki.ref
       mustache :file_view, { :layout => false }
+    end
+
+    get '/refresh' do
+        mustache :refresh, { :layout => false }
     end
 
     get '/*' do

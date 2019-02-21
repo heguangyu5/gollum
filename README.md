@@ -1,6 +1,19 @@
 gollum -- A git-based Wiki
 ====================================
 
+## How to setup this forked gollum?
+
+1. `git clone https://github.com/gollum/gollum`
+2. `cd gollum`
+3. `bundle install --verbose`
+4. `sudo gem install -V gollum-rugged_adapter`
+5. `mkdir /path/to/book && cd /path/to/book && git init`
+6. `bundle exec bin/gollum /path/to/book`
+7. Open `http://localhost:4567` in your browser.
+
+
+
+
 [![Gem Version](https://badge.fury.io/rb/gollum.svg)](http://badge.fury.io/rb/gollum)
 [![Build Status](https://travis-ci.org/gollum/gollum.svg?branch=master)](https://travis-ci.org/gollum/gollum)
 [![Open Source Helpers](https://www.codetriage.com/gollum/gollum/badges/users.svg)](https://www.codetriage.com/gollum/gollum)

@@ -11,24 +11,33 @@
 </head>
 <body>
 
-<div id="home_button">
-  <ul class="actions">
-    <li class="minibutton">
-      <a href="{{base_url}}/" class="action-home-page">Home</a>
-    </li>
-  </ul>
-</div>
-
 {{#has_results}}
   <div id="results">
   {{{results}}}
+    <div style="margin:20px 0">
+        <a href="/pages" style="border:1px solid #ddd;padding:5px 10px;background:#fff;">All Pages</a>
+    </div>
   </div>
 {{/has_results}}
 
-{{#no_results}}
-  <p id="no-results">
-    There are no pages in <strong>{{ref}}</strong>.
-  </p>
-{{/no_results}}
+<div id="gollum-in-iframe"></div>
+
+<script src="{{base_url}}/javascript/jquery-1.7.2.min.js"></script>
+<script>
+$(document).ready(function () {
+    var $first = $('#results > ol a:first'),
+        firstUrl;
+    if ($first.length === 0) {
+        firstUrl = '/create/%E5%89%8D%E8%A8%80';
+    } else {
+        firstUrl = $first.attr('href');
+    }
+    $('#gollum-in-iframe').append('<iframe src="' + firstUrl + '" width="100%" frameborder="0" style="min-height:99vh"></iframe>');
+    $('#results a').click(function (e) {
+        e.preventDefault();
+        $('iframe').attr('src', $(this).attr('href'));
+    });
+});
+</script>
 </body>
 </html>

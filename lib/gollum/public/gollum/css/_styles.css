@@ -3,35 +3,36 @@
 }
 
 #results a:hover {
-  background-color: #4c4c4c;
-}
-
-#home_button {
-  position: absolute;
-  top: 10px;
-  left: 50%;
-}
-
-#home_button .minibutton {
-  font-size: 1em;
-  text-align: center;
+    text-decoration: underline;
 }
 
 #results {
-  position: absolute;
-  top: 60px;
-  left: 10px;
+    box-sizing: border-box;
+    width: 400px;
+    height: 100%;
+    padding: 10px;
+    background: #f8f8f8;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-right: 1px solid #d0d0d0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#gollum-in-iframe {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 400px;
+    bottom: 0;
+    right: 0;
+    overflow-y: auto;
 }
 
 body, form, ul, li, p, h1, h2, h3, h4, h5 {
   margin: 0;
   padding: 0;
-}
-
-body {
-  background-color: #606061;
-  color: #ffffff;
-  margin: 0;
 }
 
 img {
@@ -44,7 +45,7 @@ p {
 }
 
 html { font-size: 100%; /* IE hack */ }
-body { font-size: 1em; /* Sets base font size to 16px */ }
+body { font-size: 14px; /* Sets base font size to 16px */ }
 table { font-size: 100%; /* IE hack */ }
 input, select, textarea, th, td { font-size: 1em; }
 
@@ -56,7 +57,6 @@ li.file {
 /* CSS Tree menu styles */
 ol.tree
 {
-  padding: 0 0 0 30px;
   width: 300px;
 }
   li
@@ -72,7 +72,6 @@ ol.tree
   }
     li.file a
     {
-      color: #fff;
       text-decoration: none;
       display: inline-block;
     }
@@ -87,19 +86,7 @@ ol.tree
       }
       li.file form
       {
-          vertical-align:middle;
-          display: inline-block;
-      }
-        li.file form button
-        {
-          vertical-align:middle;
-          height: 20px;
-          padding-left: 36px;
-          padding-right: 10px;
-          border: 0px solid #000000;
-          background: url("../images/fileview/trashcan.png") no-repeat 16px center;
-          cursor: pointer;
-        }
+          display: none;
       }
       li.file a[href *= '.pdf'] span.icon { background: url(../images/fileview/document.png) 0 0 no-repeat; }
       li.file a[href *= '.html'] span.icon { background: url(../images/fileview/document.png) 0 0 no-repeat; }

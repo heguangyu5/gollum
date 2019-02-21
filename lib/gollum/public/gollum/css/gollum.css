@@ -261,7 +261,8 @@ a:hover, a:visited {
 .page #footer {
   clear: both;
   border-top: 1px solid #ddd;
-  margin: 1em 0 7em;
+  margin: 1em 1em 7em;
+  text-align: center;
 }
 
 #footer p#last-edit {
