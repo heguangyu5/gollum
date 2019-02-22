@@ -7,7 +7,6 @@ Mousetrap.bind(['e'], function( e ) {
 </script>
 <div id="wiki-wrapper" class="page">
 <div id="head">
-  <h1>{{page_header}}</h1>
   <ul class="actions">
     <li class="minibutton">
       {{>searchbar}}
@@ -40,6 +39,7 @@ Mousetrap.bind(['e'], function( e ) {
 </div>
 <div id="wiki-content">
 <div class="{{#has_header}}has-header{{/has_header}}{{#has_footer}} has-footer{{/has_footer}}{{#has_sidebar}} has-sidebar has-{{bar_side}}bar{{/has_sidebar}}{{#has_toc}} has-toc{{/has_toc}}">
+  <h1 style="text-align:center">{{page_header}}</h1>
   {{#has_toc}}
   <div id="wiki-toc-main">
     {{{toc_content}}}
