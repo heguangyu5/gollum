@@ -90,6 +90,10 @@ Mousetrap.bind(['e'], function( e ) {
 </form>
 
 <script>
-var $title = document.getElementById('title');
-$title.innerText = $title.innerText.split('/').pop();
+var $title = document.getElementById('title'),
+    title  = $title.innerText.split('/').pop(),
+    pos    = title.indexOf('.');
+if (pos) {
+    $title.innerText = title.substr(pos + 1);
+}
 </script>
