@@ -39,7 +39,7 @@ Mousetrap.bind(['e'], function( e ) {
 </div>
 <div id="wiki-content">
 <div class="{{#has_header}}has-header{{/has_header}}{{#has_footer}} has-footer{{/has_footer}}{{#has_sidebar}} has-sidebar has-{{bar_side}}bar{{/has_sidebar}}{{#has_toc}} has-toc{{/has_toc}}">
-  <h1 style="text-align:center">{{page_header}}</h1>
+  <h1 style="text-align:center" id="title">{{page_header}}</h1>
   {{#has_toc}}
   <div id="wiki-toc-main">
     {{{toc_content}}}
@@ -88,3 +88,8 @@ Mousetrap.bind(['e'], function( e ) {
   <input type="hidden" name="rename"/>
   <input type="hidden" name="message"/>
 </form>
+
+<script>
+var $title = document.getElementById('title');
+$title.innerText = $title.innerText.split('/').pop();
+</script>
