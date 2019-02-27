@@ -96,4 +96,7 @@ var $title = document.getElementById('title'),
 if (pos) {
     $title.innerText = title.substr(pos + 1);
 }
+$('img').click(function () {
+    window.open($(this).attr('src'));
+});
 </script>

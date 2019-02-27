@@ -151,6 +151,7 @@ MSG
   opts.on("--template-dir [PATH]", "Specify custom mustache template directory.") do |path|
     wiki_options[:template_dir] = path
   end
+  wiki_options[:universal_toc] = true
 
   opts.separator ""
   opts.separator "  Common:"
