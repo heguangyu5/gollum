@@ -41,9 +41,7 @@ Mousetrap.bind(['e'], function( e ) {
 <div class="{{#has_header}}has-header{{/has_header}}{{#has_footer}} has-footer{{/has_footer}}{{#has_sidebar}} has-sidebar has-{{bar_side}}bar{{/has_sidebar}}{{#has_toc}} has-toc{{/has_toc}}">
   <h1 style="text-align:center" id="title">{{page_header}}</h1>
   {{#has_toc}}
-  <div id="wiki-toc-main">
-    {{{toc_content}}}
-  </div>
+  <div id="wiki-toc-main">{{{toc_content}}}</div>
   {{/has_toc}}
   {{#has_sidebar}}
   <div id="wiki-sidebar" class="gollum-{{sidebar_format}}-content">

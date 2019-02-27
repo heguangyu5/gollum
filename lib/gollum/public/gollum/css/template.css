@@ -562,11 +562,13 @@ a:active, a:hover {
 .toc ul {
   padding-left: 10px;
   margin: 0;
+  list-style: circle;
 }
 
 .toc > ul {
   margin-left: 10px;
   font-size: 17px;
+  list-style: none;
 }
 
 .toc ul ul {

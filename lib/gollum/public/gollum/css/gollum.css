@@ -125,7 +125,7 @@ a:hover, a:visited {
 }
 
 /* @section toc */
-#wiki-toc-main {
+#wiki-toc-main:not(:empty) {
   background-color: #F7F7F7;
   border: 1px solid #DDD;
   font-size: 13px;
