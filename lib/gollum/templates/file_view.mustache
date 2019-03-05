@@ -37,6 +37,15 @@ $(document).ready(function () {
         e.preventDefault();
         $('iframe').attr('src', $(this).attr('href'));
     });
+
+    $('#results > ol li:not(.file) > label').click(function () {
+        var $ol = $(this).nextAll('ol');
+        if ($ol.data('hide')) {
+            $ol.show().data('hide', false);
+        } else {
+            $ol.hide().data('hide', true);
+        }
+    });
 });
 </script>
 </body>
